@@ -36,7 +36,7 @@ var showQuestion = function(question) {
 // this function takes the results object from StackOverflow
 // and returns the number of results and tags to be appended to DOM
 var showSearchResultsQ = function(query, resultNum) {
-	var results = resultNum + ' results for <strong>' + query + '</strong>';
+	var results = resultNum + ' Unanswered Questions for the tag, <strong>' + query + '</strong>';
 	return results;
 };
 
