@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Stack Overflow AJAX Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -20,48 +21,47 @@
 			<h3>Get Unanswered Questions</h3>
 			<p>Find unanswered questions by tag. For multiple tags, use a semi-colon to separate.</p>
 			<form class="unanswered-getter">
-				<input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" autofocus required>
-				<input type="submit" value="Submit">
+				<input type="text" placeholder='e.g., "HTML" or "HTML;CSS"' name="tags" size="30" class="form-control" autofocus required>
+				<button class="btn btn-warning">submit</button>
 			</form>
 			<h3>View the Top Answerers for a Tag</h3>
 			<form class="inspiration-getter">
-				<input type="text" placeholder="e.g., jQuery" name="answerers" size="30"  required>
-				<input type="submit" value="Submit">
+				<input type="text" placeholder="e.g., jQuery" name="answerers" size="30" class="form-control" required>
+				<button class="btn btn-primary" >submit</button>
 			</form>
 		</div>
 		<br />
-		<div class="results-container">
-			<div class="search-results"></div>
-			<div class="results" style="text-align: left; display: inline-block;"></div>
+		<div class="results-container" style="text-align: left;">
+			<div class="search-results" style="text-align: left; display: inline-block; font-size: 24px; color: #106c9a; padding: 6px; font-family: sans-serif;"></div>
+			<div class="results"></div>
 		</div>
 	</div>
 	<div class="templates hidden">
 		<dl class="result question">
-			<dt>Question</dt>
-				<dd class="question-text"><a href="" target="_blank"></a></dd>
-			<dt>Asked</dt>
-				<dd class="asked-date"></dd>
-			<dt>Viewed</dt>
-				<dd class="viewed"></dd>
-			<dt>Asker</dt>
-				<dd class="asker"></dd>
+			<div>Question: <span class="question-text"><a href="" target="_blank"></a></span></div>
+			<div>Asked: <span class="asked-date"></span></div>
+			<div>Viewed: <span class="viewed"></span></div>
+			<div>Asker: <span class="asker"></span></div>
 		</dl>
 		<br />
-		<div class="result answerers" style="font-family: sans-serif; width: 400px; text-align: left;">
-			<img src class="user-image">
+		<dl class="result answerers" style="font-family: sans-serif; width: 570px; text-align: left;">
+			<img src class="user-image" style="float: right;">
 			<div><strong>Display Name:</strong> <span class="user-name"><a href="" target="_blank"></a></span></div> 
-			<div><strong>Reputation:</strong> <span class="user-reputation"></span></div>
+			<div><strong>Reputation:</strong> <span class="user-reputation" style="color:#888888;"></span></div>
 				
-			<div><strong>Post Count:</strong> <span class="user-postcount"></span></div>
+			<div><strong>Post Count:</strong> <span class="user-postcount" style="color:#888888;"></span></div>
 				
-			<div><strong>Score: </strong> <span class="user-score"></span></div>
+			<div><strong>Score: </strong> <span class="user-score" style="color:#888888;"></span></div>
+
+			<div><strong>Accept Rate: </strong> <span class="user-accept" style="color:#888888;"></span></div>
 				
 		</dl>
-		<!-- <div class="error">
+		<div class="error">
 			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
-		</div> -->
+		</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
