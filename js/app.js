@@ -35,7 +35,7 @@ var showQuestion = function(question) {
 
 // this function takes the results object from StackOverflow
 // and returns the number of results and tags to be appended to DOM
-var showSearchResults = function(query, resultNum) {
+var showSearchResultsQ = function(query, resultNum) {
 	var results = resultNum + ' results for <strong>' + query + '</strong>';
 	return results;
 };
@@ -66,7 +66,7 @@ var getUnanswered = function(tags) {
 		type: "GET",
 	})
 	.done(function(result){ //this waits for the ajax to return with a succesful promise object
-		var searchResults = showSearchResults(request.tagged, result.items.length);
+		var searchResults = showSearchResultsQ(request.tagged, result.items.length);
 
 		$('.search-results').html(searchResults);
 		//$.each is a higher order function. It takes an array and a function as an argument.
